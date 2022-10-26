@@ -17,14 +17,10 @@ public class EmpController {
 	@Autowired
 	private EmpServices empServices; 
 	
-	@GetMapping("/")
-	public String tempEmployee() {
-		return empServices.tempEmployee();
-	}
 	
 	@PostMapping("/employee")
-	public String addEmployee(@RequestBody Employee emp) {
-		return empServices.addEmployee(emp);
+	public Employee addEmployee(@RequestBody EmpData empData) {
+		return empServices.addEmployee(empData);
 	}
 	
 	@GetMapping("/employee")

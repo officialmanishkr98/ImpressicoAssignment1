@@ -5,8 +5,6 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
-
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -20,18 +18,28 @@ public class EmpServices {
 	@Autowired
 	private EmpRepository empRepository;
 	
-	public String tempEmployee() {
-		Employee temp = new Employee();
-		temp.setName("TempName");
-		temp.setAge("0000");	
-		empRepository.save(temp);
-		
-		return "Temp employee is Created";
-	}
+	@Autowired
+	private EmpDepRepository empDepRepository;
 	
-	public String addEmployee( Employee emp ) {
-		empRepository.save(emp);
-		return "Employee Added Successfully";
+	
+	
+	public Employee addEmployee( EmpData empData ) {
+	
+		Employee employee = new Employee();
+		EmpDepartment empDepartment = new EmpDepartment();
+		
+		employee.setName(   empData.getName()    );
+		employee.setAge(    empData.getAge()     );
+		
+		empDepartment.setDepartmentName( empData.getDepartmentName() );
+		
+		EmpDepartment dep = empDepRepository.save(empDepartment);
+		
+		employee.setEmpDepartment(dep);
+		
+		Employee emp = empRepository.save(employee);
+
+		return emp;
 	}
 	
 	public List<Employee> getAllEmployee() {

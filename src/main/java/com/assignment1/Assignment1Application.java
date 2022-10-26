@@ -3,9 +3,6 @@ package com.assignment1;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.assignment1.app.EmpRepository;
-import com.assignment1.app.Employee;
-
 @SpringBootApplication
 public class Assignment1Application {
 
@@ -14,5 +11,20 @@ public class Assignment1Application {
 		SpringApplication.run(Assignment1Application.class, args);
 		
 	}
-
 }
+
+//public class Assignment1Application implements CommandLineRunner{
+//
+//	public static void main(String[] args) {
+//		
+//		SpringApplication.run(Assignment1Application.class, args);
+//		
+//	}
+//
+//	@Override
+//	public void run(String... args) throws Exception {
+//		// TODO Auto-generated method stub
+//		
+//	}
+//
+//}
