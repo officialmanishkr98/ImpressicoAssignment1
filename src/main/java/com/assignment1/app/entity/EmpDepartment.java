@@ -1,4 +1,4 @@
-package com.assignment1.app;
+package com.assignment1.app.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

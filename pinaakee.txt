@@ -1,0 +1,14 @@
+application.properties file
+	-> connetion wityh mysql server
+	-> adding username id and password
+
+explain Assignment.,application1.java
+	-> it will talk to controller
+	-> controller will talk to entities
+	-> entities will create Tables in employeeDB
+	
+	
+-> then pinaakee will show Mysql workbench and different tables created in it
+-> 1 post reques and its changes occuring in mysql
+	
+	

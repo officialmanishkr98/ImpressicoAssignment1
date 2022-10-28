@@ -1,4 +1,4 @@
-package com.assignment1.app;
+package com.assignment1.app.entity;
 
 import lombok.Data;
 
@@ -10,6 +10,8 @@ public class EmpData {
 	private String salary;
 	
 	private String age;
+	
+//	private Integer departmentID;
 	
 	private String departmentName;
 

@@ -1,4 +1,4 @@
-package com.assignment1.app;
+package com.assignment1.app.entity;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -8,7 +8,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
-
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

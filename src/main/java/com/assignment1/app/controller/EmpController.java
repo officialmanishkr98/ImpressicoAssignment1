@@ -1,4 +1,4 @@
-package com.assignment1.app;
+package com.assignment1.app.controller;
 
 import java.util.List;
 
@@ -10,6 +10,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.assignment1.app.entity.EmpData;
+import com.assignment1.app.entity.Employee;
+import com.assignment1.app.services.EmpServices;
 
 @RestController
 public class EmpController {
